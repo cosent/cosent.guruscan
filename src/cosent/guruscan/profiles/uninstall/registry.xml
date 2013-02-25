@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<registry>
+ <record name="cosent.guruscan.interfaces.IGuruscanSettings.activated" delete="true" />
+ <record name="cosent.guruscan.interfaces.IGuruscanSettings.developer_mode" delete="true" />
+ <record name="cosent.guruscan.interfaces.IGuruscanSettings.client_name" delete="true" />
+ <record name="cosent.guruscan.interfaces.IGuruscanSettings.secret_key" delete="true" />
+</registry>

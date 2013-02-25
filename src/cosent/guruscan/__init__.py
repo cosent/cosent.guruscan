@@ -1,4 +1,3 @@
-# -*- extra stuff goes here -*-
 
 
 def initialize(context):

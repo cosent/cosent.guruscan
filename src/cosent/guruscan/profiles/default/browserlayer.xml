@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="cosent.guruscan"
+        interface="cosent.guruscan.interfaces.IGuruscanLayer"
+        />
+</layers>
