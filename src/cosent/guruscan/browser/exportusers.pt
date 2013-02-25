@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"
+?>
+<guru_user_data
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    client="cosent"
+    tal:attributes="client view/get_client_name">
+  <timestamp
+      tal:content="view/get_timestamp">2012-02-25T13:03:03Z</timestamp>
+  <persons>
+    <person tal:repeat="person view/get_users">
+      <username tal:content="person/username">dhenson</username>
+      <firstname tal:content="person/firstname">Dave</firstname>
+      <lastname tal:content="person/lastname">Henson</lastname>
+      <guruscan_access>true</guruscan_access>
+      <email tal:content="person/email">dhenson@nobody.com</email>
+      <picture tal:content="person/picture">http://intranet/peoplefinder/1BB28465DC.png</picture>
+      <ou />
+      <location tal:content="person/location">NYC</location>
+      <phonenumber />
+      <sm_link />
+    </person>
+  </persons>
+</guru_user_data>

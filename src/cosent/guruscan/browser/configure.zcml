@@ -14,4 +14,12 @@
       layer="..interfaces.IGuruscanLayer"
       />
 
+  <browser:page
+      name="exportusers"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      class=".exportusers.ExportUsers"
+      permission="cmf.ManagePortal"
+      layer="..interfaces.IGuruscanLayer"
+      />
+
 </configure>
