@@ -1,0 +1,55 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+  <div metal:fill-slot="content">
+    <metal:main-macro define-macro="content">
+      <div id="content"
+           tal:define="maxiprofile python:view.maxiprofile_provider(view.userid)">
+
+        
+        <div tal:condition="not:maxiprofile">
+          <h2>Nothing here</h2>
+          <div tal:condition="view/userid">
+            No such user <b tal:content="view/userid" />.
+          </div>
+        </div>
+        
+	<div tal:content="structure maxiprofile" />
+
+        <tal:debug condition="nothing">
+          <h2>Guruscan</h2>
+          <dl>
+            <dt>key</dt><dd tal:content="view/get_key">key</dd>
+            <dt>client_name</dt><dd tal:content="view/get_client_name">client_name</dd>
+            <dt>dt</dt><dd tal:content="view/get_dt">datetime</dd>
+            <dt>userName</dt><dd tal:content="view/userName">username</dd>
+            <dt>userHash</dt><dd tal:content="view/userHash">md5 hash</dd>
+            <dt>url</dt>
+            <dd><a tal:attributes="href view/get_url"
+                   tal:content="view/get_url">url</a></dd>
+          </dl>
+        </tal:debug>
+
+        <iframe id="guruscan" src="#" style="width:100%; height:500px"
+                tal:attributes="src view/get_url" />
+
+        <h2>Updates</h2>
+        <div class="description">Status updates by
+        <span tal:replace="view/data/fullname">name</span>:
+        </div>
+
+        <div tal:content="structure view/stream_provider" />
+
+      </div><!-- /content -->
+    </metal:main-macro>
+  </div>
+    
+</body>
+</html>

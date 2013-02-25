@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="cosent.guruscan">
+
+
+  <browser:page
+      name="guruscan"
+      for="Products.CMFCore.interfaces.ISiteRoot"
+      class=".guruscan.GuruscanView"
+      permission="zope2.View"
+      layer="..interfaces.IGuruscanLayer"
+      />
+
+</configure>
