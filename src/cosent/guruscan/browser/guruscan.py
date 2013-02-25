@@ -27,11 +27,8 @@ class GuruscanView(ProfileView):
     def get_dt(self):
         return datetime.now().strftime("%Y%m%d%H%M")
 
-    def userName(self):
-        return 'gstevens'
-
     def userHash(self):
-        plaintext = "%s.%s.%s" % (self.userName(),
+        plaintext = "%s.%s.%s" % (self.viewer_id,
                                   self.get_dt(),
                                   self.get_key())
         return md5.new(plaintext).hexdigest()
@@ -39,6 +36,9 @@ class GuruscanView(ProfileView):
     def get_url(self):
         url = "http://%s.guruscan.net" % self.get_client_name()
         url += "/guruscan/participant.htm"
-        url += "?userName=%s" % self.userName()
+        url += "?userName=%s" % self.viewer_id
         url += "&userHash=%s" % self.userHash()
+        if self.userid != self.viewer_id:
+            url += "&goTo=/guruscan/participant/searchparticipants.htm"
+            url += "&participantUserId=%s" % self.userid
         return url

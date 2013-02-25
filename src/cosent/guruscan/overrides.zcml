@@ -5,22 +5,13 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="cosent.guruscan">
 
-
-  <!-- see also overrides.cfg -->
+  <!-- override and extend plonesocial.network @@profile -->
   <browser:page
-      name="guruscan"
+      name="profile"
       for="Products.CMFCore.interfaces.ISiteRoot"
-      class=".guruscan.GuruscanView"
+      class=".browser.guruscan.GuruscanView"
       permission="zope2.View"
-      layer="..interfaces.IGuruscanLayer"
-      />
-
-  <browser:page
-      name="exportusers"
-      for="Products.CMFCore.interfaces.ISiteRoot"
-      class=".exportusers.ExportUsers"
-      permission="cmf.ManagePortal"
-      layer="..interfaces.IGuruscanLayer"
+      layer=".interfaces.IGuruscanLayer"
       />
 
 </configure>
