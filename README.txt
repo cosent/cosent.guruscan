@@ -1,5 +1,1 @@
-.. contents::
-
-Introduction
-============
-
+README.rst

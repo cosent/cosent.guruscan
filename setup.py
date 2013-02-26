@@ -1,14 +1,9 @@
 from setuptools import setup, find_packages
 
-version = '0.1'
+version = '1.0dev'
 
 long_description = (
-    open('README.txt').read()
-    + '\n' +
-    'Contributors\n'
-    '============\n'
-    + '\n' +
-    open('CONTRIBUTORS.txt').read()
+    open('README.rst').read()
     + '\n' +
     open('CHANGES.txt').read()
     + '\n')
@@ -23,9 +18,9 @@ setup(
     classifiers=[
         "Programming Language :: Python",
     ],
-    keywords='',
-    author='',
-    author_email='',
+    keywords='zope, plone, guruscan',
+    author='Guido Stevens',
+    author_email='guido.stevens@cosent.net',
     url='http://github.com/cosent/cosent.guruscan',
     license='gpl',
     packages=find_packages('src'),
