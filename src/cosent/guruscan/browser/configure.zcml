@@ -6,7 +6,6 @@
     i18n_domain="cosent.guruscan">
 
 
-  <!-- see also overrides.cfg -->
   <browser:page
       name="guruscan"
       for="Products.CMFCore.interfaces.ISiteRoot"
@@ -16,7 +15,7 @@
       />
 
   <browser:page
-      name="exportusers"
+      name="guruscan-exportusers"
       for="Products.CMFCore.interfaces.ISiteRoot"
       class=".exportusers.ExportUsers"
       permission="cmf.ManagePortal"
