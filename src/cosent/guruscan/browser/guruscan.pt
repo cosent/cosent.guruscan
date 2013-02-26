@@ -10,7 +10,7 @@
 
   <div metal:fill-slot="content">
     <metal:main-macro define-macro="content">
-      <div id="content">
+      <div id="content" tal:condition="view/userid">
 
         <tal:debug condition="nothing">
           <h2>Guruscan</h2>
