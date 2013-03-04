@@ -32,7 +32,7 @@ Companies
 
 |Cosent|_
 
-Cosent_ provides social intranets and knowledge management solutions using Plone.
+This package was created by Cosent_.
 
 Authors
 -------
